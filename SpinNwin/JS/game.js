@@ -16,6 +16,9 @@ let config = {
         preload : preload,
         create : create, 
         update : update
+    },
+    audio: {
+        disableWebAudio: true
     }
 
 };
@@ -33,8 +36,8 @@ function preload(){             //called only once when it is getting started
     this.load.image('wheel', '../Assets/wheel.png');
     this.load.image('pin', '../Assets/pin.png');
     this.load.image('stand', '../Assets/stand.png');
-
-
+    this.load.image('clickHere', '../Assets/click.png')
+    this.load.audio('spinAudio', '../Assets/spinAudio.mp3')
 }
 
 function create(){
@@ -44,9 +47,9 @@ function create(){
     let H = game.config.height;
 
     
-    let background = this.add.sprite(0,0,'background');
-    background.setPosition(W/2, H/2);
-    background.setScale(0.2);
+    this.background = this.add.sprite(0,0,'background');
+    this.background.setPosition(W/2, H/2);
+    this.background.setScale(0.2);
 
     let stand = this.add.sprite(W/2, H/2 + 210, 'stand');
     stand.setScale(0.25);
@@ -55,11 +58,14 @@ function create(){
     this.wheel.setScale(0.2);
     //this.wheel.alpha = 0.5;
 
+    this.clickHere = this.add.sprite(W/2, H/2+150, 'clickHere').setInteractive();
+    this.clickHere.setScale(0.2);
+
     let pin = this.add.sprite(W/2, H/2 - 210, 'pin');
     pin.setScale(0.25);
 
     //event listener for mouse click
-    this.input.on("pointerdown", spinwheel, this);
+    this.clickHere.on("pointerdown", spinwheel, this);
 
     //lets create a text object
     font_style = {
@@ -69,6 +75,17 @@ function create(){
     }
 
     this.game_text = this.add.text(10,10, "Welcome to Spin & Win", font_style)
+
+    tween = this.tweens.add({
+        targets: this.background,
+        angle: "+=50", // Needs to be rnadomly generated
+        repeat: -1,
+        callbackScope: this,
+        onComplete: function(){
+            this.game_text.setText("You won "+ prizes_config.prize_names[idx]);
+            spinState = false;
+        }
+    });
 }
 
 
@@ -77,10 +94,14 @@ function update(){          //GAME LOOP - called repeatedly
     console.log("Inside Update");
     // this.wheel.angle += 1;
     // this.wheel.scaleX += 0.01;
+    
 }
 
-
+spinState = false;
 function spinwheel(){
+    if(spinState == false){
+
+    spinState = true;
     console.log("ROLLING!!!!!!");
     console.log("Start spinning")
     this.game_text.setText("ROLLING!!!!!")
@@ -92,15 +113,20 @@ function spinwheel(){
     console.log(total_angle)
 
     let idx = prizes_config.count - 1 - Math.floor(degrees/(360/prizes_config.count));
-
+    let music = this.sound.add('spinAudio')
+    music.play();
     tween = this.tweens.add({
         targets: this.wheel,
         angle: total_angle, // Needs to be rnadomly generated
         ease : "Cubic.easeOut",
-        duration: 4000,
+        duration: 8000,
         callbackScope: this,
         onComplete: function(){
             this.game_text.setText("You won "+ prizes_config.prize_names[idx]);
+            spinState = false;
         }
     });
+
+    
+    }
 }
