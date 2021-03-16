@@ -24,3 +24,12 @@ This game is using the Phaser 3 framework that uses tweens for animations. Furth
 <p align="center">
   <img src="images/spinNwin.png" width="600" title="Spin Wheel">
 </p>
+
+
+## Project 3 - Fruit Collector ##
+
+This game is similar to Mario and uses Physics arcade engine of Phaser 3 framework. It uses tweens for animations and by using phaser framework, I have implemented overlaps and collisions on the various sprites in the game. 
+
+<p align="center">
+  <img src="images/Fruit_Collector.png" width="800" title="Fruit Collector Game">
+</p>
