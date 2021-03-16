@@ -78,13 +78,8 @@ function create(){
 
     tween = this.tweens.add({
         targets: this.background,
-        angle: "+=50", // Needs to be rnadomly generated
+        angle: "+=30", // Needs to be rnadomly generated
         repeat: -1,
-        callbackScope: this,
-        onComplete: function(){
-            this.game_text.setText("You won "+ prizes_config.prize_names[idx]);
-            spinState = false;
-        }
     });
 }
 
