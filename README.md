@@ -33,3 +33,17 @@ This game is similar to Mario and uses Physics arcade engine of Phaser 3 framewo
 <p align="center">
   <img src="images/Fruit_Collector.png" width="800" title="Fruit Collector Game">
 </p>
+
+
+
+## Project 4 - Sudoku Solver ##
+
+I have implemented a sudoku solver that generates random sudoku problems from a heroku API and using that I fill the given Sudoku Boxes. Using the backtracking algorithm, I solve the sudoku for the given problem and fill it in the appropriate boxes.
+The website uses Bootstrap 4 and FontAwesome for styling. 
+
+<p align="center">
+  <img src="images/SudokuSolver.png" width="800" title="Sudoku Solver">
+</p>
+
+
+
