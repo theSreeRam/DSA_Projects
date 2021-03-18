@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/5548f5ed00.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+        
+        <link rel="stylesheet" href="style.css">
+        <script src="heap.js"></script>
+        <script src="script.js" type="module"></script>
+
+    </head>
+
+    <body>
+        <nav class="navbar navbar-light bg-light">
+            <a id="topText" class="navbar-brand " href="#">
+                <h3><i class="fas fa-globe-asia"></i>
+              Split Wise Implementation </h3> <h6> Project implementing Cashflow Minimization</h6>
+            </a>
+            <a class="navbar-brand mx-auto" href="#">
+                <div align="center" >
+                    Sreeram Panigrahi    <br>
+                    <a href="https://www.linkedin.com/in/sreeram-panigrahi-18959b14a/" target = "_blank"> <i class="fab fa-linkedin fa-lg p-2">   </i> </a>
+                    <a href="https://github.com/theSreeRam" target = "_blank"><i class="fab fa-github fa-lg p-2"></i></a>
+                    <a href="https://www.facebook.com/panigrahi.sree/" target = "_blank"><i class="fab fa-facebook-f fa-lg p-2"></i></a>
+        
+                </div>
+    
+    
+    
+    
+            </a>
+    
+          </nav>
+          <div id="container">
+            <div id="mynetwork">
+            </div>
+            <div id="container2">
+                <span id="temptext2" style="width: 100%; text-align: center; font-size: x-large">
+                </span>
+                <span id="temptext" style="width: 100%; text-align: center; font-size: x-large">
+                    Click on solve to get Solution !!
+                </span>
+                <div id="mynetwork2" style="display: none"></div>
+            </div>
+        </div>
+    
+        <div>
+            <br>
+            <button type="button" class="btn btn-danger" id="generate-graph">Get New Problem</button>
+            <br>
+            <button type="button" class="btn btn-success" id="solve">Solve</button>
+        </div>
+    
+    </body>
+</html>
