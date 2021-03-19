@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="stack.js"></script>
+    <script src="script.js" type="module"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a id="topText" class="navbar-brand " href="#">
+            <h3><i class="fab fa-whatsapp"></i>
+          Text Editor</h3> <h6> Project implementing Stacks</h6>
+        </a>
+        <a class="navbar-brand mx-auto" href="#">
+            <div align="center" >
+                Sreeram Panigrahi    <br>
+                <a href="https://www.linkedin.com/in/sreeram-panigrahi-18959b14a/" target = "_blank"> <i class="fab fa-linkedin fa-lg p-2">   </i> </a>
+                <a href="https://github.com/theSreeRam" target = "_blank"><i class="fab fa-github fa-lg p-2"></i></a>
+                <a href="https://www.facebook.com/panigrahi.sree/" target = "_blank"><i class="fab fa-facebook-f fa-lg p-2"></i></a>
+    
+            </div>
+
+
+
+
+        </a>
+
+      </nav>
+    <div id="container">
+        <div class="text_box" style="padding: 60px">
+            Type in the box below
+            <br><br>
+            <textarea class="form-control" id="comment" style="height: 100%;">
+            </textarea>
+        </div>
+        <div class="text_box" style="overflow-y: scroll">
+            <span id="temptext" style="width: 100%; text-align: center; font-size: x-large">
+                Sequence of operations will be shown here !
+            </span>
+        </div>
+    </div>
+
+    <div>
+        <br>
+        <button type="button" class="btn btn-success" id="undo">&nbsp;&nbsp;&nbsp;Undo&nbsp;&nbsp;&nbsp;</button>
+        <br>
+        <button type="button" class="btn btn-danger" id="clear">Clear Box</button>
+    </div>
+</body>
+
+</html>
