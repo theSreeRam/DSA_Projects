@@ -45,5 +45,30 @@ The website uses Bootstrap 4 and FontAwesome for styling.
   <img src="images/SudokuSolver.png" width="800" title="Sudoku Solver">
 </p>
 
+## Project 5 - Travel Path
+Implementing Dijkstra algorithm to find shortest distance between the source and the destination
+<p align="center">
+  <img src="images/travelPath1.png" width="800" title="Travel Path 1">
+</p>
 
+## Project 6 - LRU CACHE - WHATSAPP CHATLIST
+Created whatsappp chatlist with the concept from LRU cache where the messages are generated randomly and gets updated as per the various insertion and deletion instructions. It shows the latest messsages in the thread in the display.
+
+<p align="center">
+  <img src="images/whatsapp.png" width="800" title="whatsapp">
+</p>
+
+## Project 7 - Splitwise Algorithm
+Splitwise algorithm implementation to find the final amount that a user must receive/give to another user by overall simplying the debt/credit of all the person in the group.
+
+<p align="center">
+  <img src="images/splitwise2.png" width="800" title="splitwise">
+</p>
+
+## Project 8 - FILE Zipper for Text Files
+File zipper for text files that encodes and stores the file on the browser using Huffman encoding algorithm and displays the compression ratio. It can also decode the encoded file back to their original form.
+
+<p align="center">
+  <img src="images/fileZipper.png" width="800" title="fileZipper">
+</p>
 
